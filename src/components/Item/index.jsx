@@ -1,18 +1,19 @@
 import React from 'react';
 import styles from './item.module.scss';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../redux/slice/ItemSlice';
 
-function Item() {
+function Item({ title, imgUrl, price, id }) {
+  const dispatch = useDispatch();
   return (
     <div className={styles.item}>
       <div className={styles.top}>
-        <img src="./img/2.png" alt="" />
+        <img src={imgUrl} alt="photo" />
       </div>
-      <div className={styles.title}>Я весёлый</div>
+      <div className={styles.title}>{title}</div>
       <div className={styles.info}>
-        <div className={styles.price}>от 395 ₽</div>
-        <button>
-          Добавить <div className={styles.counter}>5</div>
-        </button>
+        <div className={styles.price}>от {price} ₽</div>
+        <button onClick={() => dispatch(addItem({ title, imgUrl, price, id }))}>Добавить</button>
       </div>
     </div>
   );
