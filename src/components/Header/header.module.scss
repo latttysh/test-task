@@ -3,6 +3,9 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+  a {
+    text-decoration: none;
+  }
   .logo {
     font-weight: 900;
     font-size: 24px;
@@ -32,6 +35,7 @@
       color: #ffffff;
       border-right: 1px solid #fff;
       padding-right: 13px;
+      text-decoration: none;
     }
     .count {
       font-weight: 700;

@@ -22,6 +22,9 @@ export const ItemSlice = createSlice({
       console.log(action.payload);
       state.cart.push(action.payload);
     },
+    removeCart: (state) => {
+      state.cart = [];
+    },
   },
   extraReducers: {
     [fetchItems.pending]: (state) => {
@@ -42,4 +45,4 @@ export const ItemSlice = createSlice({
 
 export const itemsReduce = ItemSlice.reducer;
 
-export const { addItem } = ItemSlice.actions;
+export const { addItem, removeCart } = ItemSlice.actions;

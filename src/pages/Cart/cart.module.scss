@@ -1,0 +1,28 @@
+.cart {
+  .header {
+    padding-bottom: 50px;
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: 0.01em;
+      color: #000000;
+    }
+    .delete {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #b6b6b6;
+      cursor: pointer;
+    }
+  }
+  .items {
+    width: 700px;
+    margin: 0 auto;
+  }
+}

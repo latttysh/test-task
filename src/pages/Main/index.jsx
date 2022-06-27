@@ -14,10 +14,9 @@ function Main() {
   }, []);
   return (
     <div className={styles.main}>
-      {' '}
       {isItemsLoading ? (
         <>
-          <div className="">Hello</div>
+          <div className=""></div>
         </>
       ) : (
         items.count.map((obj) => (

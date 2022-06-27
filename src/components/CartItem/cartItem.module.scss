@@ -1,0 +1,30 @@
+.cartitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 700px;
+  img {
+    width: 71px;
+    height: 75px;
+    border-radius: 10px;
+    margin-right: 1vw;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    margin-right: 8vw;
+    color: #000000;
+  }
+  .price {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+  }
+}
