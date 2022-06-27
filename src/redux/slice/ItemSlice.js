@@ -3,8 +3,7 @@ import axios from 'axios';
 
 export const fetchItems = createAsyncThunk('items/fetchItems', async () => {
   console.log('Получаем данные');
-  const { data } = await axios.get('https://627f909abe1ccb0a4661beb7.mockapi.io/pizzas');
-  console.log(data);
+  const { data } = await axios.get('http://localhost:3000/posts');
   return data;
 });
 

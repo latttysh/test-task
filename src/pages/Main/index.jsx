@@ -8,17 +8,17 @@ function Main() {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.items);
   console.log(items);
-  const isItemsLoading = items.status === 'loading';
+  const isItemsLoading = items.status === 'loaded';
+
+  console.log(isItemsLoading);
+
   React.useEffect(() => {
     dispatch(fetchItems());
   }, []);
+
   return (
     <div className={styles.main}>
       {isItemsLoading ? (
-        <>
-          <div className=""></div>
-        </>
-      ) : (
         items.count.map((obj) => (
           <Item
             title={obj.title}
@@ -28,6 +28,8 @@ function Main() {
             key={obj.id}
           />
         ))
+      ) : (
+        <>False</>
       )}
     </div>
   );

@@ -1,0 +1,29 @@
+
+{
+  "posts": [
+    {
+      "id": 0,
+      "imageUrl": "https://avrorra.com/wp-content/uploads/2019/09/post_5d6bf7e3a82c0.jpg",
+      "title": "Многофункциональный",
+      "price": 100
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://static10.tgstat.ru/channels/_0/dd/dda0821ddd1b6d5008996895a8a2605a.jpg",
+      "title": "Юмор",
+      "price": 200
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://avatars.mds.yandex.net/i?id=704f15e4a4a072b16e40ecb5e07399e2-5258253-images-thumbs&n=13",
+      "title": "Сообразительность",
+      "price": 200
+    },
+    {
+      "id": 4,
+      "imageUrl": "http://900igr.net/up/datas/216201/016.jpg",
+      "title": "Ответственность",
+      "price": 100
+    }
+  ]
+}
