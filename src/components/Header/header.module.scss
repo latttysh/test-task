@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  .logo {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #181818;
+  }
+  .sublogo {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #7b7b7b;
+  }
+
+  .cart {
+    display: flex;
+    background: #6c6c6c;
+    border-radius: 30px;
+    padding: 15px 20px;
+    gap: 20px;
+    cursor: pointer;
+    .price {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: #ffffff;
+      border-right: 1px solid #fff;
+      padding-right: 13px;
+    }
+    .count {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: #ffffff;
+    }
+  }
+}
