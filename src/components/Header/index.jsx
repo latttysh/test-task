@@ -1,7 +1,12 @@
 import React from 'react';
 import styles from './header.module.scss';
+import { useSelector } from 'react-redux';
 
 function Header() {
+  const items = useSelector((state) => state.items);
+  const totalCount = items.cart.reduce((sum, item) => sum + item.price, 0);
+  console.log(items.cart);
+
   return (
     <div className={styles.header}>
       <div className="block">
@@ -9,8 +14,8 @@ function Header() {
         <div className={styles.sublogo}>Смотрим и думаем взять ли меня на работу</div>
       </div>
       <div className={styles.cart}>
-        <div className={styles.price}>520 ₽</div>
-        <div className={styles.count}>3 ШТ</div>
+        <div className={styles.price}>{totalCount} ₽</div>
+        <div className={styles.count}>{items.cart.length} ШТ</div>
       </div>
     </div>
   );
