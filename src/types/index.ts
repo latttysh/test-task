@@ -1,8 +1,10 @@
 export interface ItemI {
-    id: number,
+    id: string
     color: string
 }
 
 export type SquaresSliceInitialStateI = {
     items: ItemI[]
 }
+
+export type AddSquarePayloadI = ItemI

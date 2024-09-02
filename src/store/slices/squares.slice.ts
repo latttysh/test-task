@@ -1,22 +1,34 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { SquaresSliceInitialStateI } from "../../types";
+import {
+    Action,
+    ActionCreatorWithPayload,
+    createSlice,
+    PayloadAction,
+} from '@reduxjs/toolkit'
+import {
+    AddSquarePayloadI,
+    ItemI,
+    SquaresSliceInitialStateI,
+} from '../../types'
 
 const initialState: SquaresSliceInitialStateI = {
-    items: []
+    items: [],
 }
 
 export const squaresSlice = createSlice({
-    name: "Squares",
+    name: 'Squares',
     initialState,
     reducers: {
-        addNewSquare: (state, action) => {
-            state.items.unshift({id: state.items.length + 1, color: action.payload})
+        addNewSquare: (state, action: PayloadAction<AddSquarePayloadI>) => {
+            state.items.unshift({
+                id: action.payload.id,
+                color: action.payload.color,
+            })
         },
         deleteLastSquare: (state) => {
             state.items.pop()
-        }
-    }
+        },
+    },
 })
 
-export const {addNewSquare,deleteLastSquare} = squaresSlice.actions
+export const { addNewSquare, deleteLastSquare } = squaresSlice.actions
 export default squaresSlice.reducer
